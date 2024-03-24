@@ -1,0 +1,7 @@
+Las arrow functions son una forma más concisa de escribir funciones en JavaScript. 
+Se introdujeron en ECMAScript 6 y proporcionan una sintaxis más compacta y clara en comparación con las funciones tradicionales. 
+Las arrow functions se definen utilizando la sintaxis () => {}, 
+donde los paréntesis contienen los parámetros de la función y la flecha => indica que la función devuelve el valor después de la flecha.
+
+Los callbacks son funciones que se pasan como argumentos a otras funciones y se ejecutan después de que se complete una operación asincrónica o un evento. 
+Los callbacks son comunes en JavaScript, especialmente en operaciones como la lectura de archivos, las solicitudes HTTP o los eventos del usuario. 

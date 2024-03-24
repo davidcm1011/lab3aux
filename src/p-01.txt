@@ -1,0 +1,33 @@
+gitignore: es un archivo donde se espesifica a que archivos o directorios no afecte el git add y el git commit 
+    Supongamos que tienes un proyecto web y deseas ignorar los archivos generados por el sistema de construcción,
+    los módulos de dependencias y los archivos de configuración local. Puedes crear un archivo,
+    .gitignore en la raíz de tu repositorio y agregar las siguientes líneas
+        node_modules/  --> ignorar el directorio y todo su contenido
+        dist/           -->ignora este directorio
+        build/          -->ignora este directorio
+        config.json     -->ignora este archivo
+esto ayuda a mantener limpio el control de versiones.
+
+package.json: es un archivo de configuración utilizado principalmente en proyectos de Node.js,
+para gestionar dependencias, scripts y metadatos del proyecto.
+    un ejemplo corto seria
+        {
+  "name": "mi-proyecto",    --nombre del proyecto
+  "version": "1.0.0",           --version
+  "description": "Descripción del proyecto",  --una breve descripcion del proyecto
+  "main": "index.js",       --archivo principal  del proyecto
+  "scripts": {              -- define scripts de npm que pueden ser ejecutados con el comando npm run
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "dependencies": {         --especifica las dependencias del proyecto necesarias para su funcionamiento
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {      -- especifica las dependencias del proyecto necesarias solo para desarrollo
+    "jest": "^27.0.6"
+  }
+}
+
+yarn.lock:es un archivo de bloqueo generado por Yarn que registra la versión exacta de todas las dependencias instaladas en un proyecto, 
+así como las versiones de las dependencias de las dependencias (y así sucesivamente).

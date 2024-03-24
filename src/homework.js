@@ -6,9 +6,9 @@
   
   let numbers = [1, 2, 3, 4, 5];
   
-  /* Multiplique los numeros del arreglo por 5 */
+  let multiplie = numbers.map(number => number * 5);
 
-  /*Resultado esperado: [5, 10, 15, 20, 25] */
+  console.log(multiplie);
 
   /* First excercise */
 
@@ -16,9 +16,9 @@
 
   let names = ["Jhosep", "Daniel", "Rodrigo", "Veronica"];
 
-  /* Ordernar los nombres alfabeticamente */
+  names.sort();
 
-  /* Resultado esperado: ["Daniel", "Jhosep", "Rodrigo", "Veronica"] */
+  console.log(names);
 
   /* Second excercise */
 
@@ -26,8 +26,12 @@
 
   const data = ['a', 'b', 'z', 'r', 'a', 'c', 'r', 'a'];
 
-  /* Dado un arreglo, crear otro sin letras repetidas */
-  /* Resultado esperado: ['a', 'b', 'z', 'r', 'c'] */
+  function eliminarRepetidas(arr) {
+      return arr.filter((value, index, self) => self.indexOf(value) === index);
+  }
+  const sinRepetidas = eliminarRepetidas(data);
+
+  console.log(sinRepetidas);
 
   /* Thrid excercise */
 
@@ -35,19 +39,22 @@
 
   const largeWord = "abcdabcdABCD";
 
-  /* Dado un string mostrar cuantas veces se repite cada letra*/
-  /* Resultado: 
-    {
-      a: 2,
-      b: 2,
-      c: 2,
-      d: 2,
-      A: 1,
-      B: 1,
-      C: 1,
-      D: 1
+function contarRepeticiones(str) {
+    let letras = {};
+
+    for (let letra of str) {
+        if (letras[letra]) {
+            letras[letra]++;
+        } else {
+            letras[letra] = 1;
+        }
     }
-  */
+
+    for (let letra in letras) {
+        console.log(` ${letra} : ${letras[letra]} ,`);
+    }
+}
+contarRepeticiones(largeWord);
 
   /* Fourth excercise */
 
